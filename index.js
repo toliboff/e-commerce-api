@@ -1,9 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://toliboff:parol2021@cluster0.iqhjv.mongodb.net/Projet0?retryWrites=true&w=majority").then(()=>console.log('Connection success'));
-
+const dotenv  = require("dotenv");
 const app = express();
+const userRoute = require('./routes/user')
+dotenv.config();
 
-app.listen(5000, ()=>{
+mongoose.connect(process.env.MONGO_URL)
+.then(()=>console.log('DB connection successfull!'))
+.catch(e=>console.log(e))
+
+app.use(express.json())
+app.use('/api/user', userRoute)
+
+app.listen(process.env.PORT || 5000, ()=>{
   console.log("Backend server is running");
 })
