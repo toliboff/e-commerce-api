@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(express.json())
 app.use('/api/auth', authRoute)
-app.use('/api/user', userRoute)
+app.use('/api/users', userRoute)
 app.get('/api/test', (req, res)=>{
   res.send("TEst test test");
 })
