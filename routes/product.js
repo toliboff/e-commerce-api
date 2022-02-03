@@ -29,17 +29,17 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res)=>{
     res.status(500).json(error)
   }
 })
-
+ 
 // DELETE
 router.delete("/:id", verifyTokenAndAdmin, async (req, res)=>{
   try {
    await Product.findByIdAndDelete(req.params.id);
-   res.send(200).json("Product has been deleted");
+   res.status(200).json("Product has been deleted");
   } catch (error) {
     res.status(500).json(error)
   }
 })
-
+ 
 // // GET PRODUCT
 router.get("/find/:id", async (req, res)=>{
   try {
