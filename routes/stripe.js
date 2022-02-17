@@ -3,6 +3,7 @@ require ("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY_MY);
 
 router.post("/payment", (req, res)=>{
+  console.log(req.body);
   stripe.charges.create({
     source: req.body.tokenId,
     amount: req.body.amount,
