@@ -17,8 +17,8 @@
 ## To get a local copy of this repository kindly follow the steps below.
 - In your local PC, open your terminal or command prompt in the folder you would like to clone this repository into
 - Make sure you have `Node NPM` installed on your computer
-- Clone or download this repo on your machine: `git clone https://github.com/marketcap.git`
-- Enter project directory with command `cd marketcap`
+- Clone or download this repo on your machine: `git clone https://github.com/e-commerce-api.git`
+- Enter project directory with command `cd `
 ### Install
 - Run `npm install`
 ### Testing
@@ -35,7 +35,7 @@
 # Contributing
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page.](https://github.com/toliboff/marketcap/issues)
+Feel free to check the [issues page.](https://github.com/toliboff/e-commerce-api/issues)
 
 # Show your support
 Give a :star: if you like this project!
